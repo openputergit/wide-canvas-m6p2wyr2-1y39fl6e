@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Foundry - Your Gateway to Inspired Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .slide-in {
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="app" class="min-h-screen">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/40x40/800020/FFFFFF?text=WF" alt="Logo" class="h-8 w-8 rounded">
+                        <span class="ml-2 text-xl font-semibold text-[#800020]">Wisdom Foundry</span>
+                    </div>
+                    <div class="flex items-center">
+                        <button id="menuButton" class="p-2 rounded-md text-gray-600 hover:text-gray-900">
+                            <i class="bi bi-list text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sidebar Menu -->
+        <div id="sidebar" class="fixed inset-y-0 left-0 transform -translate-x-full transition-transform duration-300 ease-in-out bg-white w-64 z-50">
+            <div class="h-full flex flex-col">
+                <div class="p-4 flex items-center justify-between border-b">
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/40x40/800020/FFFFFF?text=WF" alt="Profile" class="h-10 w-10 rounded-full">
+                        <span class="ml-3 font-medium">Student</span>
+                    </div>
+                    <button id="closeMenu" class="p-2">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <div class="flex-1 overflow-y-auto">
+                    <div class="p-4">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded">
+                                    <i class="bi bi-person mr-3"></i>
+                                    My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded">
+                                    <i class="bi bi-graph-up mr-3"></i>
+                                    Implementation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded">
+                                    <i class="bi bi-share mr-3"></i>
+                                    Share
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded">
+                                    <i class="bi bi-info-circle mr-3"></i>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded">
+                                    <i class="bi bi-translate mr-3"></i>
+                                    Language
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Platform Selection -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-semibold mb-4">Online Platform</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button class="p-4 bg-white border rounded-lg hover:shadow-md transition-shadow flex items-center justify-center">
+                            <img src="https://via.placeholder.com/50x50" alt="NEET" class="h-12">
+                        </button>
+                        <button class="p-4 bg-white border rounded-lg hover:shadow-md transition-shadow flex items-center justify-center">
+                            <img src="https://via.placeholder.com/50x50" alt="JEE" class="h-12">
+                        </button>
+                        <button class="p-4 bg-white border rounded-lg hover:shadow-md transition-shadow flex items-center justify-center">
+                            <img src="https://via.placeholder.com/50x50" alt="NDA" class="h-12">
+                        </button>
+                        <button class="p-4 bg-white border rounded-lg hover:shadow-md transition-shadow flex items-center justify-center">
+                            <img src="https://via.placeholder.com/50x50" alt="CET" class="h-12">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-semibold mb-4">Offline Platform</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button class="p-4 bg-white border rounded-lg hover:shadow-md transition-shadow flex items-center justify-center">
+                            <img src="https://via.placeholder.com/50x50" alt="Study Material" class="h-12">
+                        </button>
+                        <button class="p-4 bg-white border rounded-lg hover:shadow-md transition-shadow flex items-center justify-center">
+                            <img src="https://via.placeholder.com/50x50" alt="Notes" class="h-12">
+                        </button>
+                        <button class="p-4 bg-white border rounded-lg hover:shadow-md transition-shadow flex items-center justify-center">
+                            <img src="https://via.placeholder.com/50x50" alt="PDFs" class="h-12">
+                        </button>
+                        <button class="p-4 bg-white border rounded-lg hover:shadow-md transition-shadow flex items-center justify-center">
+                            <img src="https://via.placeholder.com/50x50" alt="Resources" class="h-12">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Menu Toggle Functionality
+        const menuButton = document.getElementById('menuButton');
+        const closeMenu = document.getElementById('closeMenu');
+        const sidebar = document.getElementById('sidebar');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.remove('-translate-x-full');
+            sidebar.classList.add('translate-x-0');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            sidebar.classList.remove('translate-x-0');
+            sidebar.classList.add('-translate-x-full');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuButton.contains(e.target)) {
+                sidebar.classList.remove('translate-x-0');
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+
+        // Authentication placeholder (to be implemented)
+        function signIn(email, password) {
+            // Implement sign in logic
+            console.log('Sign in attempted');
+        }
+
+        function signUp(email, password) {
+            // Implement sign up logic
+            console.log('Sign up attempted');
+        }
+
+        // Platform selection handlers
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Handle platform selection
+                console.log('Platform selected:', button.querySelector('img').alt);
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
